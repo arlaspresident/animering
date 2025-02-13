@@ -10,3 +10,50 @@
   .fade-in {
     animation: fadeIn 1.5s ease-in-out;
   }
+
+  @keyframes fly-up {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.2);
+        opacity: 0;
+    }
+  }
+
+  .balloon {
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px; 
+    animation: fly-up 5s infinite ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .balloon:nth-child(1) {
+    background: radial-gradient(circle, #ff4757 60%, #e84118 100%);
+    left: 10%;
+    animation-delay: 0s;
+  }
+  .balloon:nth-child(2) {
+    background: radial-gradient(circle, #1e90ff 60%, #3742fa 100%);
+    left: 30%;
+    animation-delay: 1s;
+  }
+  .balloon:nth-child(3) {
+    background: radial-gradient(circle, #2ed573 60%, #16a085 100%);
+    left: 50%;
+    animation-delay: 2s;
+  }
+  .balloon:nth-child(4) {
+    background: radial-gradient(circle, #fbc531 60%, #e1b12c 100%);
+    left: 70%;
+    animation-delay: 3s;
+  }
+  .balloon:nth-child(5) {
+    background: radial-gradient(circle, #ff79c6 60%, #e84393 100%);
+    left: 90%;
+    animation-delay: 4s;
+  }
