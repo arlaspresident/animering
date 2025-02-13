@@ -4,6 +4,7 @@
 @use "layout";
 @use "themes";
 @use "components";
+@use "animations";
 
 body {
   font-family: variables.$font-stack;
