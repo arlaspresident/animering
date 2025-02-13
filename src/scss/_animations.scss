@@ -16,44 +16,88 @@
         transform: translateY(100vh) scale(1);
         opacity: 1;
     }
+
+    50% {
+        opacity: 1;
+    }
+
     100% {
         transform: translateY(-200px) scale(1.2);
         opacity: 0;
     }
   }
 
-  .balloon {
-    width: 60px;
-    height: 80px;
-    border-radius: 50%;
+  .heart {
     position: absolute;
-    bottom: -100px; 
-    animation: fly-up 5s infinite ease-in-out;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: fly-up 5s infinite ease-in-out forwards;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   }
+  .heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 25px;
+} 
+
+.heart:nth-child(1) {
+  background-color: red;
+  left: 15%;
+  animation-delay: 0s;
+}
+.heart:nth-child(2) {
+  background-color: red;
+  left: 30%;
+  animation-delay: 1s;
+}
+.heart:nth-child(3) {
+  background-color: red;
+  left: 50%;
+  animation-delay: 2s;
+}
+.heart:nth-child(4) {
+  background-color: red;
+  left: 70%;
+  animation-delay: 3s;
+}
+.heart:nth-child(5) {
+  background-color: red;
+  left: 90%;
+  animation-delay: 4s;
+}
+
+.heart-button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff4757, #e84393);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
   
-  .balloon:nth-child(1) {
-    background: radial-gradient(circle, #ff4757 60%, #e84118 100%);
-    left: 10%;
-    animation-delay: 0s;
+  .heart-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #e84393, #ff4757);
   }
-  .balloon:nth-child(2) {
-    background: radial-gradient(circle, #1e90ff 60%, #3742fa 100%);
-    left: 30%;
-    animation-delay: 1s;
-  }
-  .balloon:nth-child(3) {
-    background: radial-gradient(circle, #2ed573 60%, #16a085 100%);
-    left: 50%;
-    animation-delay: 2s;
-  }
-  .balloon:nth-child(4) {
-    background: radial-gradient(circle, #fbc531 60%, #e1b12c 100%);
-    left: 70%;
-    animation-delay: 3s;
-  }
-  .balloon:nth-child(5) {
-    background: radial-gradient(circle, #ff79c6 60%, #e84393 100%);
-    left: 90%;
-    animation-delay: 4s;
-  }
+  
