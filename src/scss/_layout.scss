@@ -1,0 +1,43 @@
+@use "variables";
+@use "mixins" as mixins;
+
+header {
+    background-color: darken(variables.$primary-color, 5%);
+    padding: variables.$spacing-unit 0;
+  
+    nav {
+      @include mixins.container;
+  
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+  
+        li a {
+          text-decoration: none;
+          color: #fff; 
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+  .hero {
+    @include mixins.container;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .content {
+    @include mixins.container;
+    padding: 2rem 0;
+  }
+  
+  footer {
+    background-color: darken(variables.$primary-color, 10%);
+    color: #fff;
+    text-align: center;
+    padding: variables.$spacing-unit 0;
+    font-size: 0.9rem;
+  }
+  

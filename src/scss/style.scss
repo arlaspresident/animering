@@ -1,0 +1,13 @@
+@use "variables" as variables;
+@use "mixins" as mixins;
+@use "base";
+@use "layout";
+@use "themes";
+@use "components";
+
+body {
+  font-family: variables.$font-stack;
+  background-color: variables.$background-light;
+  color: variables.$text-light;
+  margin: 0;
+}

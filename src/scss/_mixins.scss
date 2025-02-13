@@ -1,0 +1,21 @@
+@use "variables" as vars;
+
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin container {
+    width: 90%;
+    max-width: vars.$max-width;
+    margin: 0 auto;
+  }
+  
+  @mixin responsive-text($size-mobile, $size-desktop) {
+    font-size: $size-mobile;
+    @media (min-width: 768px) {
+      font-size: $size-desktop;
+    }
+  }
+  

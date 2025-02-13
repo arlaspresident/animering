@@ -1,0 +1,48 @@
+@use "mixins" as mixins;
+@use "variables" as variables;
+
+
+.button {
+    @include mixins.center-content;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: lighten(variables.$primary-color, 10%);
+    color: #fff;
+  
+    &:hover {
+      background-color: variables.$primary-color;
+    }
+  }
+
+  .message {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .success {
+    @extend .message;
+    background-color: lighten(variables.$secondary-color, 40%);
+    color: #333;
+  }
+  
+  .error {
+    @extend .message;
+    background-color: #ffdddd;
+    color: #600;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: variables.$spacing-unit;
+  
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  

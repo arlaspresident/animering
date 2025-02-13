@@ -1,0 +1,29 @@
+@use "variables" as variables; 
+
+$theme: light;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: variables.$background-dark;
+    color: variables.$text-dark;
+  }
+  header {
+    background-color: lighten(variables.$background-dark, 5%);
+    nav ul li a {
+      color: variables.$text-dark;
+    }
+  }
+  footer {
+    background-color: lighten(variables.$background-dark, 10%);
+    color: variables.$text-dark;
+  }
+}
+
+
+body {
+  @if $theme == light {
+    box-shadow: 0 0 5px darken(variables.$background-light, 10%);
+  } @else {
+    box-shadow: 0 0 5px lighten(variables.$background-dark, 10%);
+  }
+}
