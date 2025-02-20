@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         //länk till json
-        const response = await fetch('/statistik_sokande_ht24.json');
+        const response = await fetch('https://studenter.miun.se/~mallar/dt211g/');
         const data = await response.json();
 
         //filtrera kurser och program
@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const program = data.filter(item => item.type === "Program");
 
         //sortera efter flest totala sökande
-        const topKurser = kurser.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 10);
-        const topProgram = program.sort((a, b) => b.applicantsTotal - a.applicantsTotal).slice(0, 10);
+        const topKurser = kurser
+            .sort((a, b) => Number(b.applicantsTotal) - Number(a.applicantsTotal))
+            .slice(0, 10);
+        const topProgram = program
+            .sort((a, b) => Number(b.applicantsTotal) - Number(a.applicantsTotal))
+            .slice(0, 10);
 
         //färger till diagram
         const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#9C27B0', '#FF9800', '#8BC34A', '#00ACC1', '#795548', '#607D8B'];

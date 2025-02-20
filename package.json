@@ -2,10 +2,10 @@
   "name": "sass-website",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel serve src/index.html src/sass.html",
-    "build": "parcel build src/index.html src/sass.html"
+    "dev": "parcel serve src/*.html",
+    "build": "parcel build src/*.html",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
