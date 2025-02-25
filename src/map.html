@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karta</title>
+  <link rel="stylesheet" href="./scss/style.scss" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sass.html">SASS</a></li>
+        <li><a href="animation.html">Animering</a></li>
+        <li><a href="diagram.html">Diagram</a></li>
+        <li><a href="map.html">Karta</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Karta</h1>
+    <p>Skriv in en plats och se den på kartan:</p>
+    
+    <form id="search-form">
+      <input type="text" id="location-input" placeholder="Ange plats...">
+      <button type="submit">Sök</button>
+    </form>
+    
+    <div id="map-container">
+      <iframe id="map" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </main>
+  
+  <script src="map.js"></script>
+</body>
+</html>

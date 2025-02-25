@@ -13,6 +13,7 @@
   "description": "",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
+    "jsdoc": "^4.0.4",
     "parcel": "^2.13.3"
   }
 }
