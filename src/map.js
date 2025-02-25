@@ -1,3 +1,16 @@
+/**
+ * Initierar kartfunktionen.
+ *
+ * När sidan har laddats läggs en eventlyssnare på sökformuläret. Vid submit anropas
+ * Nominatim API för att hämta koordinater baserat på användarens inmatade plats. Om APIet returnerar
+ * resultat används den första träffen för att extrahera latitud och longitud som konverteras till nummer.
+ * Sen beräknas en bounding box runt platsen och en OpenStreetMap iframe uppdateras med en inbäddad karta
+ * som visar platsen med en markör.
+ *
+ * @async
+ * @function initMap
+ * @returns {Promise<void>} Ett promise som löses när kartan har uppdaterats.
+ */
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("search-form");
     const input = document.getElementById("location-input");

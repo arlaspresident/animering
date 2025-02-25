@@ -1,3 +1,15 @@
+/**
+ * Initierar diagrammen för kurser och program genom att hämta data från en extern källa,
+ * filtrera och sortera datan och sedan skapa ett stapeldiagram för de mest sökta kurserna 
+ * samt ett cirkeldiagram för de mest sökta programmen med chart.js.
+ *
+ * Data hämtas asynkront från en extern URL som förväntas returnera json data med objekt
+ * som innehåller egenskaperna type, name, applicantsTotal osv
+ *
+ * @async
+ * @function initCharts
+ * @returns {Promise<void>} ett promise som löses när diagrammen har skapats.
+ */
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         //länk till json
