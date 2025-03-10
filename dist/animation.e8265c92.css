@@ -247,4 +247,16 @@ body {
   margin: 0;
   font-family: Open Sans, sans-serif;
 }
+
+.chart-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
 /*# sourceMappingURL=animation.e8265c92.css.map */

@@ -12,3 +12,16 @@ body {
   color: variables.$text-light;
   margin: 0;
 }
+
+
+.chart-container {
+  width: 90%;
+  max-width: 600px;  
+  margin: 20px auto; 
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
