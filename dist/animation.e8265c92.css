@@ -21,7 +21,8 @@ h1, h2, h3 {
 
 header {
   background-color: #258cd1;
-  padding: 1rem 0;
+  padding: 1rem .5rem;
+  box-shadow: 0 2px 4px #0000001a;
 }
 
 header nav {
@@ -31,29 +32,40 @@ header nav {
 }
 
 header nav ul {
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
 }
 
 header nav ul li a {
   color: #fff;
+  font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
+  transition: color .3s;
+}
+
+header nav ul li a:hover {
+  color: #54d98c;
 }
 
 .hero {
   text-align: center;
+  background-color: #e1f0fa;
+  border-radius: 8px;
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
+  margin: 0 auto 2rem;
+  padding: 3rem 0;
 }
 
-.content {
+.content-section {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 2rem 0;
 }
 
@@ -61,8 +73,30 @@ footer {
   color: #fff;
   text-align: center;
   background-color: #217dbb;
-  padding: 1rem 0;
+  border-top: 1px solid #fff3;
+  padding: 1rem;
   font-size: .9rem;
+}
+
+.jsdoc-link {
+  color: #fff;
+  text-decoration: underline;
+  transition: color .3s;
+}
+
+.jsdoc-link:hover {
+  color: #7ee2a8;
+}
+
+@media (width <= 600px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content, .content-section {
+    padding: 1rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -262,5 +296,49 @@ canvas {
 
 .jsdoc-link {
   color: #fff;
+}
+
+.content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.cards-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  flex: 300px;
+  max-width: 300px;
+  padding: 1.5rem;
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 2px 8px #0000001a;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px #0003;
+}
+
+.card h2 {
+  color: #217dbb;
+  margin-top: 0;
+}
+
+.card ul {
+  padding-left: 1rem;
+  list-style: inside;
+}
+
+.card ul li {
+  margin-bottom: .5rem;
 }
 /*# sourceMappingURL=animation.e8265c92.css.map */

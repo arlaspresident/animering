@@ -30,3 +30,47 @@ canvas {
   color: #fff;
 }
 
+.content {
+  width: 90%;
+  max-width: variables.$max-width; 
+  margin: 0 auto;  
+  padding: variables.$spacing-unit;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card h2 {
+  margin-top: 0;
+  color: darken(variables.$primary-color, 10%);
+}
+
+.card ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+

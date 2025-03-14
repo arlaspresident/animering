@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul class="nav-menu">
         <li><a href="/index.html">Start</a></li>
         <li><a href="/sass.html">SASS</a></li>
         <li><a href="/animation.html">Animering</a></li>
@@ -19,26 +19,27 @@
     </nav>
   </header>
 
-  <main>
+  <main class="content">
     <h1>Analys av SASS</h1>
-    <section>
+    <div class="cards-container">
+      <div class="card">
       <h2>Fördelar</h2>
       <ul>
         <li>Nesting gör koden mer överskådlig och strukturerad</li>
         <li>Variabler ger enhetligt färgschema och enklare underhåll</li>
         <li>Mixins sparar tid när man har en kod som upprepas</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Nackdelar</h2>
       <ul>
         <li>Kan kännas onödigt i och med att man får allt detta gjort i vanlig css</li>
         <li>Många grejer att tänka på, vad som är vad och vad går ihop med vad</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>Att komma igång med en CSS preprocessor</h2>
       <p>
         Att sätta upp miljön kräver lite konfigurering, 
@@ -46,7 +47,8 @@
         med vanlig CSS. Man får bättre struktur, återanvändbara kodblock 
         och enkel hantering av teman.
       </p>
-    </section>
+    </div>
+    </div>
   </main>
 
   <footer>
